@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app1
+  labels:
+    app: app1
+    type: frontend
+spec:
+  selector:
+    matchLabels:
+      app: app1
+      type: frontend
+  template:
+    metadata:
+      labels:
+        app: app1
+        type: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: 1781043/flask-app:app2
+        ports:
+        - containerPort: 8080
+        imagePullPolicy: Always
+
+  replicas: 1
