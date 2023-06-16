@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
   name: unlok
-  namespace: argocd
+  namespace: unlok
 spec:
   description: "unlok project"
   sourceRepos:

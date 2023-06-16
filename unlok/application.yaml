@@ -2,13 +2,13 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: myapp-argocd-application
-  namespace: argocd
+  namespace: unlok
 spec:
   project: unlok
   source:
     repoURL: https://github.com/uday1921/K8s-test.git
     targetRevision: HEAD
-    path: unlok
+    path: dev
   destination:
     server: https://kubernetes.default.svc
     namespace: unlok
