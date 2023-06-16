@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: admin-manager
+  name: admin-dev-manager
   namespace: argocd
 spec:
   project: unlok
   source:
     repoURL: https://github.com/uday1921/K8s-test.git
-    targetRevision: HEAD
+    targetRevision: develop
     path: unlok/app1
   destination:
     server: https://kubernetes.default.svc
-    namespace: unlok
+    namespace: develop
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
