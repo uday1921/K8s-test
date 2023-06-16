@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app3
+  labels:
+    app: app3
+    type: db
+spec:
+  selector:
+    matchLabels:
+      app: app3
+      type: db
+  template:
+    metadata:
+      labels:
+        app: app3
+        type: db
+    spec:
+      containers:
+      - name: db
+        image: 1781043/flask-app:app3
+        ports:
+        - containerPort: 8080
+        imagePullPolicy: Always
+
+  replicas: 1

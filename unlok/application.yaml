@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: myapp-argocd-application
+  name: admin-manager
   namespace: unlok
 spec:
   project: unlok
@@ -11,7 +11,7 @@ spec:
     path: dev
   destination:
     server: https://kubernetes.default.svc
-    namespace: unlok
+    namespace: unlok/app1
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
