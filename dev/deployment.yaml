@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: 1781043/flask-app:app1
+        image: 1781043/flask-app:app2
         ports:
         - containerPort: 8080
         imagePullPolicy: Always
